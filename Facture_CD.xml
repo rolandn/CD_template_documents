@@ -182,7 +182,6 @@
                 </div>
             </div>
         </div>
-            </div>
 
             <p t-if="o.comment">
                 <strong>Comment:</strong>
