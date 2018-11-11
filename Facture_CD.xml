@@ -5,8 +5,8 @@
                 string="Facture Casa Domotic"
                 model="account.invoice"
                 report_type="qweb-pdf"
-                name="account.report_invoice_template"
-                file="account.report_invoice_template"/>
+                name="account.invoice_CD_template"
+                file="account.invoice_CD_template"/>
 
         <template id="invoice_CD_template">
             <t t-call="report.html_container">
