@@ -9,7 +9,7 @@
                 file="account.report_invoice_document"/>
 
         <template id="invoice_CD_template">
-            <t t-call="report.html_container">
+        <!--    <t t-call="report.html_container">  -->
                 <t t-foreach="docs" t-as="o">
                     <t t-call="report.external_layout">
                            <!--   <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>  -->
@@ -168,7 +168,7 @@
 
 
                     </t>
-                </t>
+          <!--      </t>  -->
 
         </template>
 
