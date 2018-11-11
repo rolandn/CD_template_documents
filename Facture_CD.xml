@@ -14,7 +14,8 @@
                     <t t-call="report.external_layout">
                         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
 
-        <link type="text/css" rel="stylesheet" href="style.css" />                        <!--     -->
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <div class="view" style="background-image: url('back_ground_CD.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="page">
             <link type="text/css" rel="stylesheet" href="style.css" />
             <div class="row">
@@ -153,6 +154,7 @@
                     </table>
                 </div>
             </div>
+        </div>
 
             <p t-if="o.comment">
                 <strong>Comment:</strong>
