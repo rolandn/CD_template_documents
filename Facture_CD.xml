@@ -14,10 +14,10 @@
                     <t t-call="report.external_layout">
                         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
 
-        <link type="text/css" rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css" />
         <div class="view" style="background-image: url('back_ground_CD.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="page">
-            <link type="text/css" rel="stylesheet" href="style.css" />
+
             <div class="row">
                 <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
                     <address t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
