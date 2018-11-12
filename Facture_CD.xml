@@ -18,6 +18,7 @@
         <img src='/odoo/custom/addons/CD_template_documents/back_ground_CD.jpg'/>
 
         <div class="page" style="background-image:url(/odoo/custom/addons/CD_template_documents/back_ground_CD.jpg);background-size: cover;" >
+            <img src='/odoo/custom/addons/CD_template_documents/back_ground_CD.jpg'/>
 
             <div class="row">
                 <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
