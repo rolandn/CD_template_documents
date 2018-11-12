@@ -17,7 +17,7 @@
     <div class="backgroundimage" style="position:absolute;opacity:1;font-size:3em;width:100%;height:100%;z-index:1000;">
         <img src="CD_template_documents/back_ground_CD.jpg"/>
 
-        <div class="page">
+        <div class="page" style="background-image:url(CD_template_documents/back_ground_CD.jpg)>
 
             <div class="row">
                 <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
