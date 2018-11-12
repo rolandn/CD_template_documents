@@ -168,7 +168,7 @@
                 <strong>Fiscal Position Remark:</strong>
                 <span t-field="o.fiscal_position_id.note"/>
             </p>
-        </div>
+     <!--   </div>  -->
     </t>
 
 
