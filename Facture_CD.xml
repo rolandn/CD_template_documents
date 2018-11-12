@@ -15,7 +15,7 @@
                         <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
 
     <div class="background-image" style="position:absolute;opacity:0.1;font-size:3em;width:100%;height:100%;z-index:1000;">
-        <img src="/CD_template_documents/back_ground_CD.jpg"/>
+        <img src="/odoo/custom/addons/CD_template_documents/back_ground_CD.jpg"/>
 
         <div class="page" style="background-image:url(/CD_template_documents/back_ground_CD.jpg)" >
 
