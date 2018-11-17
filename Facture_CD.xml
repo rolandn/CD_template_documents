@@ -172,7 +172,7 @@
                         <span t-field="o.fiscal_position_id.note"/>
                     </p>
 
-                </img>
+
                 </div>
 
                 </t>
