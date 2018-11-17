@@ -10,7 +10,11 @@
 
         <template id="invoice_CD_template">
 
+            <div>
+            <p>Hello</p>
             <img src="/CD_template_documents/static/src/img/back_ground_CD.png"/>
+
+            </div>
 
         </template>
 
