@@ -14,6 +14,7 @@
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
                 <div class="page">
                     <img src="/CD_template_documents/static/src/img/back_ground.png"></img>
+                    <p>HELLO</p>
                     <div class="row">
                         <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
                             <address t-field="o.partner_id"
