@@ -14,7 +14,7 @@
     ],
     "data": [
         'Facture_CD.xml',
-        'static/src/img/back_ground_CD.png',
+
     ],
     'installable': True,
 }
