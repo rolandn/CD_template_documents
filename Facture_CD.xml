@@ -10,6 +10,7 @@
 
         <template id="invoice_CD_template">
 
+            <link type="text/css" rel="stylesheet" href="style.css" />
                 <t t-foreach="docs" t-as="o">
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
                 <div class="page" style="background-image: url('/CD_template_documents/static/src/img/back_ground.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
