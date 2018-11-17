@@ -19,7 +19,7 @@ body {
   /*margin-top: -256px;*//* moitié de la hauteur */
   margin-left: -512px; /* moitié de la largeur */
   /*border: 1px solid #000;*/
-  background-image: url(./images/fondBleuBlanc.jpg);
+  background-image: url(./CD_template_documents/static/src/img/back_ground_CD.png);
   /*background-color: #e8e4de;*/
   border-radius: 10px;
 }
