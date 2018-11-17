@@ -18,7 +18,7 @@
 
                 <!--    <img src="CD_template_documents/static/src/img/back_ground_CD.png" style="position:absolute;opacity:1;width:100%;height:100%;">  -->
 
-                    <div class="background-image" style="position:absolute;opacity:1;font-size:3em;width:100%;height:100%;z-index:800;background-size: cover;">
+                    <div class="background-image" style="position:absolute;opacity:1;font-size:3em;width:100%;height:100%;background-size: cover;">  <!-- z-index:1000; -->
                         <img src="/CD_template_documents/static/src/img/back_ground_CD.png"/>
 
                     <div class="row">
