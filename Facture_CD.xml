@@ -10,7 +10,7 @@
 
         <template id="invoice_CD_template">
 
-            <img src='/odoo/custom/addons/CD_template_documents/back_ground_CD.jpg'/>
+            <img src="CD_template_documents/back_ground_CD.jpg"/>
 
         </template>
 
