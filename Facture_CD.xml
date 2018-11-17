@@ -10,7 +10,7 @@
 
         <template id="invoice_CD_template">
 
-            <img src="CD_template_documents/back_ground_CD.png"/>
+            <img src="CD_template_documents/static/src/img/back_ground_CD.png"/>
 
         </template>
 
