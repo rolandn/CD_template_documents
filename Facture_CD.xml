@@ -12,7 +12,7 @@
 
                 <t t-foreach="docs" t-as="o">
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
-                <div class="page">
+                <div class="page" style="background-image: url('/CD_template_documents/static/src/img/back_ground.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
                     <img src="/CD_template_documents/static/src/img/back_ground.png" style="position:absolute; top:0px; left:0px; width:100%; height100%"/>
 
