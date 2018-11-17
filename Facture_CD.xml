@@ -13,10 +13,12 @@
                 <t t-foreach="docs" t-as="o">
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
 
-                <div class="page" t-attf-style="background-image: url('/CD_template_documents/static/src/img/back_ground.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                <div class="page" style="background-image: url('/CD_template_documents/static/src/img/back_ground.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
                     <img src="/CD_template_documents/static/src/img/back_ground.png" style="position:absolute;opacity:0.9;width:100%;height:100%;">
 
+                    <div class="backgroundimage" style="position:absolute;opacity:0.25;font-size:3em;width:100%;height:100%;z-index:1000;">
+                        <img src="/CD_template_documents/static/src/img/back_ground.png"/>
                     <div class="row">
                         <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
                             <address t-field="o.partner_id"
@@ -24,6 +26,7 @@
                             <span t-if="o.partner_id.vat">TIN: <span t-field="o.partner_id.vat"/></span>
                         </div>
                     </div>
+                        </div>
 
                     <h2>
                         <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
