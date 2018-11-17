@@ -15,9 +15,9 @@
 
                 <div class="page" style="background-image: url('/CD_template_documents/static/src/img/back_ground_CD.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
-                    <img src="CD_template_documents/static/src/img/back_ground_CD.png" style="position:absolute;opacity:0.9;width:100%;height:100%;">
+                    <img src="CD_template_documents/static/src/img/back_ground_CD.png" style="position:absolute;opacity:1;width:100%;height:100%;">
 
-                    <div class="backgroundimage" style="position:absolute;opacity:0.25;font-size:3em;width:100%;height:100%;z-index:1000;">
+                    <div class="backgroundimage" style="position:absolute;opacity:1;font-size:3em;width:100%;height:100%;z-index:1000;">
                         <img src="/CD_template_documents/static/src/img/back_ground_CD.png"/>
                     </div>
                     <div class="row">
