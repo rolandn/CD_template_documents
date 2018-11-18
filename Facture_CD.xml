@@ -9,7 +9,7 @@
                 file="CD_template_documents.invoice_CD_template"/>
 
         <template id="invoice_CD_template">
-            <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>
+         <!--   <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>  -->
 
                 <t t-foreach="docs" t-as="o">
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
