@@ -11,7 +11,7 @@
         <template id="invoice_CD_template">
          <!--   <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>  -->
 
-            <div class="report" style="background-image: url('CD_template_documents/static/src/img/back_ground_CD.png'); opacity:1; background-position: center center; background-size: 60%; background-repeat: no-repeat;">
+
                 <t t-foreach="docs" t-as="o">
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
 
@@ -183,8 +183,6 @@
                 </div>
 
 </t>
-
-            </div>
 
 
 </template>
