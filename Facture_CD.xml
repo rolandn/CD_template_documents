@@ -204,7 +204,7 @@
 </template>
 
     <template id="report_invoice">
-        <t t-call="report.html_container" style="background-image: url('CD_template_documents/static/src/img/back_ground_CD.png'); opacity:1; background-position: center center; background-size: 50%; background-repeat: no-repeat; >
+        <t t-call="report.html_container" >
             <t t-foreach="docs" t-as="o">
                 <t t-call="account.report_invoice_document" t-lang="o.partner_id.lang"/>
             </t>
