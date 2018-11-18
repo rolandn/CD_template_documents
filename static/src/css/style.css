@@ -1,4 +1,9 @@
 @CHARSET "UTF-8";
+
+html{
+background-image: url(CD_template_documents/static/src/img/back_ground_CD.png);
+}
+
 body {
 	/*margin: 0px;*/
 	/*font-family: Georgia,Century Gothic, sans-serif;*/
