@@ -68,7 +68,7 @@ a:hover {
 
 #page {
 	position:absolute;
-	/*background-color:#AAAAAA;*/
+	background-image: url('CD_template_documents/static/src/img/back_ground_CD.png');
 	top : 80px;
 	left : 160px;
 	width:250px;
