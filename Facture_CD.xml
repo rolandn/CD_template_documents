@@ -17,7 +17,7 @@
                 <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
 
 
-                <div class="page" style="background-image: url('CD_template_documents/static/src/img/back_ground_CD.png'); opacity:1; background-position: center center; background-size: 65%; background-repeat: no-repeat; ">
+                <div class="page" style="background-image: url('CD_template_documents/static/src/img/back_ground_CD.png'); opacity:1; background-position: center center; background-size: 65%; background-repeat: no-repeat; position:absolute;top:850px; page-break-inside: avoid;">
                     <!-- style="background-image: url('CD_template_documents/static/src/img/back_ground_CD.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;;opacity:1;width:100%;height:100%;">  -->
 
                 <!--    <img src="CD_template_documents/static/src/img/back_ground_CD.png" style="position:absolute;opacity:1;width:100%;height:100%;">  -->
