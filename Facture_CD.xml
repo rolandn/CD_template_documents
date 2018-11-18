@@ -5,7 +5,7 @@
                 string="Facture Casa Domotic"
                 model="account.invoice"
                 report_type="qweb-pdf"
-                paperformat=""
+                paperformat="1"
                 name="CD_template_documents.invoice_CD_template"
                 file="CD_template_documents.invoice_CD_template"/>
 
