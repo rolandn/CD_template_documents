@@ -26,7 +26,7 @@
                   <!--      <img src="/CD_template_documents/static/src/img/back_ground_CD.png"> -->
 
                     <div class="page" >
-                        <field name="page_height">270</field>
+
                     <div class="row">
                         <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
                             <address t-field="o.partner_id"
