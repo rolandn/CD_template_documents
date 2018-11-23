@@ -83,6 +83,7 @@
                         </thead>
                         <tbody class="invoice_tbody">
                             <tr t-foreach="o.invoice_line_ids" t-as="l">
+                                <t t-if="l.customer_visible==True">
                                 <td><span t-field="l.name"/></td>
                             <!--    <td class="text-right"><span t-field="l.customer_visible"/></td>  -->
                                 <td class="hidden"><span t-field="l.origin"/></td>
@@ -103,6 +104,7 @@
                                     <span t-field="l.price_subtotal"
                                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                 </td>
+                                </t>
                             </tr>
                         </tbody>
                     </table>
