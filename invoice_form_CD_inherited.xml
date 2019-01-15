@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_invoice_form_CD_inherited" model="ir.ui.view">
+                <field name="name">Account Invoice Form Inherited for CD</field>
+                <field name="model">account.invoice</field>
+                <field name="inherit_id" ref="account.invoice_form"/>
+                <field name="arch" type="xml">
+
+                   <xpath expr="/field[@name='payement_term_id']" position="after">
+                       <field name="duedate"/>
+                   </xpath>
+
+
+                </field>
+        </record>
+    </data>
+</odoo>

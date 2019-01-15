@@ -14,6 +14,7 @@
     ],
     "data": [
         'Facture_CD.xml',
+        'invoice_form_CD_inherited.xml',
     ],
     'css': ['static/src/css/style.css'],
     'installable': True,
