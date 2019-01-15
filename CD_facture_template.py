@@ -9,3 +9,4 @@ from odoo import api, models
 class AccountInvoice(models.Model):
     _inherit = "account.invoice"
 
+    duedate = fields.Date(string="Date limite de payement", required=False, track_visibility='onchange')
