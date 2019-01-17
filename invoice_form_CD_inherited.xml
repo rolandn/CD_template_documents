@@ -7,10 +7,10 @@
                 <field name="inherit_id" ref="account.invoice_form"/>
                 <field name="arch" type="xml">
 
-                   <xpath expr="/field[@name='payement_term_id']" position="after">
-                   <!--    <field name="duedate"/>
-                       <field name="message_id"/>  -->
-                   </xpath>
+               <!--    <xpath expr="/field[@name='payement_term_id']" position="after">
+                       <field name="duedate"/>
+                       <field name="message_id"/>
+                   </xpath>   -->
 
 
                 </field>
