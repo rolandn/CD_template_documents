@@ -8,8 +8,8 @@
                 <field name="arch" type="xml">
 
                    <xpath expr="/field[@name='payement_term_id']" position="after">
-                       <field name="duedate"/>
-                       <field name="message_id"/>
+                   <!--    <field name="duedate"/>
+                       <field name="message_id"/>  -->
                    </xpath>
 
 
