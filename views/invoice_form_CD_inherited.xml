@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-         <record id="account_invoice_form_cd_inherited" model="ir.ui.view">
+        <record id="account_invoice_form_cd_inherited" model="ir.ui.view">
                 <field name="name">invoice.form.cd.inherited</field>
                 <field name="model">account.invoice</field>
                 <field name="inherit_id" ref="account.invoice_form"/>
                 <field name="arch" type="xml">
 
-               <!--   <xpath expr="//field[@name='paiement_term']" position="after">
+                  <xpath expr="//field[@name='payment_term_id']" position="after">
 
-                   </xpath>  -->
-
+                   </xpath>
 
                 </field>
-         </record>
+        </record>
     </data>
 </odoo>
