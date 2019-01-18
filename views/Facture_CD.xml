@@ -72,6 +72,9 @@
                         <p>A défaut, la facture se reporte aux livraisons/prestations survenant les 30 derniers jours.</p>
                     </div>
 
+
+                    <br></br>
+
                     <!-- Is there a discount on at least one line? -->
                     <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
 
@@ -181,6 +184,12 @@
 
                         <div></div>
 
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
                         <br></br>
 
                         <div>
