@@ -47,6 +47,12 @@
                             <strong>Invoice Date:</strong>
                             <p t-field="o.date_invoice"/>
                         </div>
+
+                        <div class="col-xs-2" t-if="o.duedate">
+                            <strong>Date limite de payement :</strong>
+                            <p t-field="o.duedate"/>
+                        </div>
+
                         <div class="col-xs-2" t-if="o.date_due and o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">
                             <strong>Due Date:</strong>
                             <p t-field="o.date_due"/>
