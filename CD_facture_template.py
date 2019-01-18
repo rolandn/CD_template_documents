@@ -11,6 +11,7 @@ class AccountInvoice(models.Model):
 
     duedate = fields.Date(string="Date limite de payement", required=False, track_visibility='onchange')
     message_id = fields.Many2one('message.invoice', string='Message', store=True, required=False, track_visibility='onchange', help="Remarque sur le taux de TVA appliqué. Ex : Autoliquidation de la TVA.")
+    num_affaire = fields.Char(string="Numéro d'affaire", required=False, track_visibility='onchange')
 
 class Message(models.Model):
     _name = 'message.invoice'
