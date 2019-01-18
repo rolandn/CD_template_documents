@@ -2,15 +2,14 @@
 <odoo>
     <data>
         <record id="account_invoice_form_CD_inherited" model="ir.ui.view">
-                <field name="name">Account Invoice Form Inherited for CD</field>
+                <field name="name">Account Invoice Form CD Inherited</field>
                 <field name="model">account.invoice</field>
                 <field name="inherit_id" ref="account.invoice_form"/>
                 <field name="arch" type="xml">
 
-               <!--    <xpath expr="/field[@name='payement_term_id']" position="after">
-                       <field name="duedate"/>
-                       <field name="message_id"/>
-                   </xpath>   -->
+               <!--    <xpath expr="//field[@name='paiement_term']" position="after">
+
+                   </xpath>  -->
 
 
                 </field>
