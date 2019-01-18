@@ -164,6 +164,10 @@
                             </table>
                         </div>
 
+
+                        <br></br>
+                        <br></br>
+
                         <div>
                             <p t-field="o.message_id"></p>
                         </div>
@@ -172,15 +176,15 @@
 
                         <p style="page-break-before:always;"> </p>
 
-                  <!--  <p t-if="o.comment">
-                        <strong>Comment:</strong>
+                    <p t-if="o.comment">
+                        <strong>onditions générales de vente :</strong>
                         <span t-field="o.comment"/>
-                    </p>  -->
-                    <p t-if="o.payment_term_id">
+                    </p>
+               <!--      <p t-if="o.payment_term_id">
                         <strong>Conditions générales de vente :</strong>
                         <span t-field="o.payment_term_id.note"/>
                     </p>
-                <!--    <p t-if="o.fiscal_position_id.note">
+                   <p t-if="o.fiscal_position_id.note">
                         <strong>Fiscal Position Remark:</strong>
                         <span t-field="o.fiscal_position_id.note"/>
                     </p>  -->
