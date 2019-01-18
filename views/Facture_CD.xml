@@ -158,7 +158,9 @@
                             </table>
                         </div>
 
-                        <p t-field="o.message_id"></p>
+                        <div>
+                            <p t-field="o.message_id"></p>
+                        </div>
 
                     </div>
 
