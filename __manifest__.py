@@ -10,13 +10,13 @@
     'website': '',
     'license': 'AGPL-3',
     "depends": [
-        'account',
+        'account','sale',
     ],
     "data": [
         'Facture_CD.xml',
         'invoice_form_CD_inherited.xml',
 
     ],
-    'css': ['static/src/css/style.css'],
+
     'installable': True,
 }
