@@ -193,6 +193,11 @@
 
                         <br></br>
 
+                        <div>
+                            <strong>Veuillez renseigner la communication suivant lors de votre paiement :</strong>
+                            <p t-field="o.num_affaire"/>
+                        </div>
+
                         <div></div>
 
                         <br></br>
