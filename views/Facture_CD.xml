@@ -221,7 +221,7 @@
 
                     <p t-if="o.comment">
                         <strong>Conditions générales de vente :</strong>
-                        <p class="small">
+                        <p class="small" align="justify">
                         <span t-field="o.comment"/>
                         </p>
                     </p>
