@@ -9,8 +9,11 @@
 
                   <xpath expr="//field[@name='payment_term_id']" position="after">
                       <field name="duedate"/>
+                  </xpath>
+
+                  <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
-                   </xpath>
+                  </xpath>
 
                 </field>
         </record>
