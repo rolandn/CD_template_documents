@@ -13,6 +13,7 @@
 
                   <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
+                      <field name="num_affaire"/>
                   </xpath>
 
                 </field>
