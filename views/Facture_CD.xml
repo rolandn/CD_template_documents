@@ -55,10 +55,7 @@
                             <strong>Source:</strong>
                             <p t-field="o.origin"/>
                         </div>
-                        <div class="col-xs-2" t-if="o.partner_id.ref">
-                            <strong>Customer Code:</strong>
-                            <p t-field="o.partner_id.ref"/>
-                        </div>
+
                         <div name="reference" class="col-xs-2" t-if="o.reference">
                             <strong>Reference:</strong>
                             <p t-field="o.reference"/>
@@ -160,6 +157,9 @@
                                 </tbody>
                             </table>
                         </div>
+
+                        <p t-field="o.message_id"></p>
+
                     </div>
 
                         <p style="page-break-before:always;"> </p>
