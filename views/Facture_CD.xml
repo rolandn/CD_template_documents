@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="col-xs-3" t-if="o.duedate">
-                            <strong>Date limite de payement :</strong>
+                            <strong>Date limite de paiement :</strong>
                             <p t-field="o.duedate"/>
                         </div>
 
@@ -73,6 +73,9 @@
                         </div>
                     </div>
 
+                    <div>
+                        <br></br>
+                    </div>
                     <div>
                         <p>A défaut, la facture se reporte aux livraisons/prestations survenant les 30 derniers jours.</p>
                     </div>
