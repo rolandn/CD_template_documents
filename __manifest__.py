@@ -15,7 +15,7 @@
     "data": [
         'views/Facture_CD.xml',
         'views/invoice_form_CD_inherited.xml',
-        'security/ir.model.access.csv,'
+        'security/ir.model.access.csv',
     ],
 
     'installable': True,
