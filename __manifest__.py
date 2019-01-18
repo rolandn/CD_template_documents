@@ -13,8 +13,8 @@
         'account','sale',
     ],
     "data": [
-        'Facture_CD.xml',
-        'invoice_form_CD_inherited.xml',
+        'views/Facture_CD.xml',
+        'views/invoice_form_CD_inherited.xml',
 
     ],
 
