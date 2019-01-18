@@ -194,7 +194,7 @@
                         <br></br>
 
                         <div>
-                            <strong>Veuillez renseigner la communication suivant lors de votre paiement :</strong>
+                            <strong>Veuillez renseigner la communication suivante lors de votre paiement :</strong>
                             <p t-field="o.num_affaire"/>
                         </div>
 
@@ -212,7 +212,7 @@
                         <br></br>
                         <br></br>
 
-                        <div>
+                        <div style="border:3px">
                             <p align="justify">
                                 En cas de retard de paiement du tout ou de partie du montant tel qu’exigé dans la convention avec le client, Casa Domotic SPRL se réserve le droit de suspendre ses prestations et de les reprendre dès régularisation du paiement. En cas de non-paiement à leur échéance, les factures porteront de plein droit et sans mise en demeure des intérêts au taux de 10% l’an. En outre, elles seront majorées de plein droit et sans mise en demeure de 10% à titre d’indemnité forfaitaire. L’indemnité ne sera jamais inférieure à 40,00 €. Le défaut ou le retard de paiement de tout ou partie d’une facture entraînera par ailleurs de plein droit et sans mise en demeure, l’exigibilité de toutes autres factures échues. Casa Domotic SPRL se réserve le droit de refuser toute commande ultérieure ou d’en subordonner l’acceptation à la remise de garanties suffisantes.
 
