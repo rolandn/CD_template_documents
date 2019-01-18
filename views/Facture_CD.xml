@@ -207,7 +207,9 @@
 
                     <p t-if="o.comment">
                         <strong>Conditions générales de vente :</strong>
+                        <p class="small">
                         <span t-field="o.comment"/>
+                        </p>
                     </p>
                <!--      <p t-if="o.payment_term_id">
                         <strong>Conditions générales de vente :</strong>
