@@ -69,7 +69,7 @@
 
                         <div name="reference" class="col-xs-3" t-if="o.num_affaire">
                             <strong>Numéro d'affaire :</strong>
-                            <p t-field="o.um_affaire"/>
+                            <p t-field="o.num_affaire"/>
                         </div>
                     </div>
 
