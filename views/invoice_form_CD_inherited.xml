@@ -7,6 +7,10 @@
                 <field name="inherit_id" ref="account.invoice_form"/>
                 <field name="arch" type="xml">
 
+                  <xpath expr="//header/button[@name='action_invoice_sent']" position="after">
+                      <button string="Mettre en draft" type="object" name="bouton_draft"/>
+                  </xpath>  
+
                   <xpath expr="//field[@name='payment_term_id']" position="after">
                       <field name="duedate"/>
                   </xpath>
