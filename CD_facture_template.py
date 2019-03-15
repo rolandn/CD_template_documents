@@ -19,3 +19,11 @@ class Message(models.Model):
     name = fields.Char(string="Text du message", required=True)
     active = fields.Boolean('Actif ?', default=True)
 
+class invoice(models.Model):
+    _inherit = ['account.invoice']
+
+    @api.one
+    def bouton_draft(self):
+        self.write({
+            'state': 'draft'
+        })
