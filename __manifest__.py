@@ -15,6 +15,7 @@
     "data": [
         'views/Facture_CD.xml',
         'views/invoice_form_CD_inherited.xml',
+        'views/invoice_supplier_inherit.xml',
         'security/ir.model.access.csv',
     ],
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_invoice_supplier_inherited" model="ir.ui.view">
+                <field name="name">invoice.supplier.inherited</field>
+                <field name="model">account.invoice</field>
+                <field name="inherit_id" ref="account.invoice_supplier_form"/>
+                <field name="arch" type="xml">
+
+                  <xpath expr="//header/button[@name='action_invoice_open']" position="after">
+                      <button string="Mettre en draft" type="object" name="bouton_draft"/>
+                  </xpath>
+
+                </field>
+        </record>
+    </data>
+</odoo>
