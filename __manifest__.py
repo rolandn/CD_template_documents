@@ -13,10 +13,11 @@
         'account','sale',
     ],
     "data": [
+        'security/ir.model.access.csv',
         'views/Facture_CD.xml',
         'views/invoice_form_CD_inherited.xml',
         'views/invoice_supplier_inherit.xml',
-        'security/ir.model.access.csv',
+        'views/partner_inherit.xml'
     ],
 
     'installable': True,
