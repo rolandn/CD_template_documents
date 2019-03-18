@@ -11,6 +11,10 @@
                       <button string="Mettre en draft" type="object" name="bouton_draft"/>
                   </xpath>
 
+                  <field name="reference" position="after">
+                      <field name = "escompte_id" string="Escompte (en %)"/>
+                  </field>
+
                 </field>
         </record>
     </data>
