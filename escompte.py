@@ -9,9 +9,9 @@ from odoo import models, fields, api, exceptions
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-#    escompte = fields.Integer(string="Taux d escompte appliqué par le fournisseur",
-#                              required=False,
-#                              track_visibility='onchange')
+    escompte = fields.Integer(string="Taux d escompte appliqué par le fournisseur",
+                              required=False,
+                              track_visibility='onchange')
 
 
 # Modification du modèle facture
