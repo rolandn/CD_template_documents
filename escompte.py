@@ -18,7 +18,8 @@ class ResPartner(models.Model):
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    escompte_id = fields.Integer(related='res.partner.escompte',
+    escompte_id = fields.Integer("res.partner",
+                                 related='escompte',
                                  readonly=True,
                                  sting="Taux d escompte obtenu",
                                  required=False,
