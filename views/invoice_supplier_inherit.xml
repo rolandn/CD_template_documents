@@ -12,7 +12,7 @@
                   </xpath>
 
                   <field name="reference" position="after">
-                      <field name = "escompte_id" string="Escompte (en %)"/>
+                <!--      <field name = "escompte_id" string="Escompte (en %)"/> -->
                   </field>
 
                 </field>
