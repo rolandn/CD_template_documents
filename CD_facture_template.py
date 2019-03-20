@@ -33,4 +33,5 @@ class invoice(models.Model):
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
+    ref = fields.Char()
     _sql_constraints = [('ref_unique', 'unique(ref)', 'Cette référence existe déjà !')]
