@@ -13,6 +13,8 @@ class AccountInvoice(models.Model):
     message_id = fields.Many2one('message.invoice', string='Message', store=True, required=False, track_visibility='onchange', help="Remarque sur le taux de TVA appliqué. Ex : Autoliquidation de la TVA.")
     num_affaire = fields.Char(string="Numéro d'affaire", required=False, track_visibility='onchange')
 
+    _sql_constraints = [('num_affaire_unique', 'unique(num_affaire)', 'Ce numéro d affaire existe déjà !')]
+
 class Message(models.Model):
     _name = 'message.invoice'
 
