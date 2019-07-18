@@ -196,7 +196,8 @@
 
                         <div>
                             <strong>Veuillez renseigner la communication suivante lors de votre paiement :</strong>
-                            <p t-field="o.number"/>
+                             <br></br>
+                            <h4 t-field="o.number"/>
                         </div>
 
                         <div></div>
