@@ -149,9 +149,9 @@
                                     </tr>
                                 </t>
                                 <tr class="border-black">
-                                    <td><strong>Total</strong></td>
+                                    <td><h4><strong>Total à payer</strong></h4></td>
                                     <td class="text-right">
-                                         <span t-field="o.amount_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                         <h4 t-field="o.amount_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                     </td>
                                 </tr>
                             </table>
