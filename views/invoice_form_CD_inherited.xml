@@ -19,13 +19,15 @@
                   <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
                       <field name="num_affaire"/>
-
-                      <group name="group_left" string="ISOCS" col="4">
-                        <field name="est_be"/>
-                        <field name="est_lux"/>
-                        <field name="est_fr"/>
-                      </group>
                   </xpath>
+
+                    <xpath expr="//field[@name='duedate']" position="after">
+                        <group name="group_left" string="A répercuter sur le résultat :" col="6">
+                        <field name="est_be" string="belge"/>
+                        <field name="est_lux" string="luxembourgeois"/>
+                        <field name="est_fr" string="français"/>
+                      </group>
+                    </xpath>
 
                 </field>
         </record>
