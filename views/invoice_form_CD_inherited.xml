@@ -19,6 +19,7 @@
                   <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
                       <field name="num_affaire"/>
+                      <div>A répercuter sur le résultat : </div>
                       <field name="est_be"/>
                       <field name="est_lux"/>
                       <field name="est_fr"/>
