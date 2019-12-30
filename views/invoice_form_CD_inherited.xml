@@ -19,11 +19,11 @@
                   <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
                       <field name="num_affaire"/>
+
                       <group name="group_left" string="ISOCS" col="4">
-                      <h3>A répercuter sur le résultat : </h3>
-                      <field name="est_be"/>
-                      <field name="est_lux"/>
-                      <field name="est_fr"/>
+                        <field name="est_be"/>
+                        <field name="est_lux"/>
+                        <field name="est_fr"/>
                       </group>
                   </xpath>
 
