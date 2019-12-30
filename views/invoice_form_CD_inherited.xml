@@ -20,6 +20,8 @@
                       <field name="message_id"/>
                       <field name="num_affaire"/>
                       <field name="est_be"/>
+                      <field name="est_lux"/>
+                      <field name="est_fr"/>
                   </xpath>
 
                 </field>
