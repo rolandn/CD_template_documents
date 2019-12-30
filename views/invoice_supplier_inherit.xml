@@ -11,11 +11,14 @@
                       <button string="Mettre en draft" type="object" name="bouton_draft"/>
                   </xpath>
 
-                  <field name="reference" position="after">
-                      <field name="est_be"/>
-                      <field name="est_lux"/>
-                      <field name="est_fr"/>
-                  </field>
+
+                    <xpath expr="//field[@name='reference']" position="after">
+                        <group name="group_left" string="A répercuter sur le(s) résultat(s) :" col="2">
+                        <field name="est_be" string="belge"/>
+                        <field name="est_lux" string="luxembourgeois"/>
+                        <field name="est_fr" string="français"/>
+                      </group>
+                    </xpath>
 
                 </field>
         </record>
