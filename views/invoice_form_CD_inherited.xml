@@ -22,7 +22,7 @@
                   </xpath>
 
                     <xpath expr="//field[@name='duedate']" position="after">
-                        <group name="group_left" string="A répercuter sur le résultat :" col="2">
+                        <group name="group_left" string="A répercuter sur le(s) résultat(s) :" col="2">
                         <field name="est_be" string="belge"/>
                         <field name="est_lux" string="luxembourgeois"/>
                         <field name="est_fr" string="français"/>
