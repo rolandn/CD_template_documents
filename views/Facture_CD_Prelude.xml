@@ -9,7 +9,7 @@
                 file="CD_template_documents.invoice_CD_prelude_template"/>
 
 
-        <template id="invoice_CD_template">
+        <template id="invoice_CD_Prelude_template">
          <!--   <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>  -->
         <t t-call="report.html_container" >
 
