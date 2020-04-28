@@ -190,6 +190,7 @@
 
                         <div>
                             <p t-field="o.message_id"></p>
+                            <p>ESCOMPTE 1,00 % LORS D'UN PAIEMENT DANS 8 JOURS SUIVANT LA DATE DE FACTURE</p>
                         </div>
 
                         <br></br>
