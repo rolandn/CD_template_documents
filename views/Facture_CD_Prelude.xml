@@ -190,7 +190,9 @@
 
                         <div>
                             <p t-field="o.message_id"></p>
+                            <t t-if="o.escompte_propose==True">
                             <p>ESCOMPTE 1,00 % LORS D'UN PAIEMENT DANS 8 JOURS SUIVANT LA DATE DE FACTURE</p>
+                            </t>
                         </div>
 
                         <br></br>
