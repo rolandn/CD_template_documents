@@ -10,8 +10,8 @@
 
 
           <!-- Ajout du champs escompte dans la vue de la fiche fournisseur -->
-            <field name="website" position="after">
-                  <field name="escompte" string="Escompte obtenu"/> 
+            <field name="customer" position="after">
+                  <field name="escompte_propose" string="Escompte proposé au client ?"/>
             </field>
 
           </field>

@@ -9,18 +9,22 @@ from odoo import models, fields, api, exceptions
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    escompte = fields.Integer(string="Taux d escompte appliqué par le fournisseur",
-                              required=False,
-                              track_visibility='onchange')
+    # escompte_obtenu = fields.Integer(string="Taux d'escompte appliqué par le fournisseur",
+    #                           required=False,
+    #                           track_visibility='onchange')
+
+    escompte_propose = fields.boolean(string="Escompte proposé ?")
+
 
 
 # Modification du modèle facture
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    escompte_id = fields.Integer("res.partner",
-                                 related='partner_id.escompte',
-                                 readonly=True,
-                                 sting="Taux d escompte obtenu",
-                                 required=False,
-                                 track_visibility='onchange')
+    escompte_propose = fields.boolean(related='partner_id.escompte_propose', string="Escompte proposé au client ?")
+    # escompte_propose_id = fields.Integer("res.partner",
+    #                              related='partner_id.escompte_obtenu',
+    #                              readonly=True,
+    #                              sting="Taux d escompte obtenu",
+    #                              required=False,
+    #                              track_visibility='onchange')
