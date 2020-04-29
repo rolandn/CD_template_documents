@@ -13,7 +13,7 @@ class ResPartner(models.Model):
     #                           required=False,
     #                           track_visibility='onchange')
 
-    escompte_propose = fields.boolean(string="Escompte proposé ?")
+    escompte_propose = fields.Boolean(string="Escompte proposé ?")
 
 
 
@@ -21,7 +21,7 @@ class ResPartner(models.Model):
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    escompte_propose = fields.boolean(related='partner_id.escompte_propose', string="Escompte proposé au client ?")
+    escompte_propose = fields.Boolean(related='partner_id.escompte_propose', string="Escompte proposé au client ?")
     # escompte_propose_id = fields.Integer("res.partner",
     #                              related='partner_id.escompte_obtenu',
     #                              readonly=True,
