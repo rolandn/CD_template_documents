@@ -19,6 +19,7 @@
                   <xpath expr="//field[@name='team_id']" position="after">
                       <field name="message_id"/>
                       <field name="num_affaire"/>
+                      <field name="escompte_propose"/>
                   </xpath>
 
                     <xpath expr="//field[@name='duedate']" position="after">
