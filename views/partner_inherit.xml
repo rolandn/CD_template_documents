@@ -11,7 +11,7 @@
 
           <!-- Ajout du champs escompte dans la vue de la fiche fournisseur -->
             <field name="lang" position="after">
-                  <field name="escompte_propose" string="Escompte proposé au client ?"/>
+                <!--  <field name="escompte_propose" string="Escompte proposé au client ?"/>  -->
             </field>
 
           </field>
