@@ -156,6 +156,13 @@
                                         </td>
                                     </tr>
                                 </t>
+
+                                <tr class="border-black">
+                                    <td><strong>Endéans les 8 jours</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_cd" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
                                 <tr class="border-black">
                                     <td><h4><strong>Total à payer</strong></h4></td>
                                     <td class="text-right">
