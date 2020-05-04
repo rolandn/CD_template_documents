@@ -141,8 +141,8 @@
                                     </td>
                                 </tr>
 
-                                <tr class="text-right">
-                                    <td><strong>Escompte 1 %</strong></td>
+                                <tr class="border-black">
+                                    <td>Escompte 1 %</td>
                                     <td class="text-right">-
                                         <span t-field="o.amount_cd_alone" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                     </td>
