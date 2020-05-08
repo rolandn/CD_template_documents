@@ -141,7 +141,7 @@
                                     </td>
                                 </tr>
 
-                                <tr class="border-black">
+                                <tr t-if="escompte_propose = True" class="border-black">
                                     <td>Escompte 1 %</td>
                                     <td class="text-right">-
                                         <span t-field="o.amount_cd_alone" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
@@ -157,7 +157,7 @@
                                     </tr>
                                 </t>
 
-                                <tr class="border-black">
+                                <tr t-if="escompte_propose = True" class="border-black">
                                     <td><strong>Endéans les 8 jours</strong></td>
                                     <td class="text-right">
                                         <span t-field="o.amount_cd" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
