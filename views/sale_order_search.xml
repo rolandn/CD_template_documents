@@ -9,8 +9,7 @@
 
                   <xpath expr="//field[@name='name']" position="after">
                       <field name="description_sale"/>
-                  <!--    <field name="manufacturer"/>  -->
-                      <field name="categ_id"/>
+                      <field name="manufacturer"/>
                   </xpath>
 
                 </field>
