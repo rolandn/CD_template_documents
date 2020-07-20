@@ -20,7 +20,7 @@
         'views/Facture_CD_Prelude.xml',
         'views/partner_inherit.xml',
         'views/sale_order.xml',
-        'views/sale_order_search.xml',
+
     ],
 
     'installable': True,
