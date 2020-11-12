@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-        <report id="facture_CD_Prelude_action"
-                string="Facture Prelude"
+        <report id="facture_CD_Prelude_bel_action"
+                string="Facture Prelude Belgique"
                 model="account.invoice"
                 report_type="qweb-pdf"
-                name="CD_template_documents.invoice_CD_Prelude_template"
-                file="CD_template_documents.invoice_CD_prelude_template"/>
+                name="CD_template_documents.invoice_CD_Prelude_bel_template"
+                file="CD_template_documents.invoice_CD_prelude_bel_template"/>
 
 
-        <template id="invoice_CD_Prelude_template">
+        <template id="invoice_CD_Prelude_bel_template">
          <!--   <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>  -->
         <t t-call="report.html_container" >
 

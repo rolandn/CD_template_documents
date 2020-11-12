@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <report id="facture_CD_Prelude_lux_action"
+                string="Facture Prelude Luxembourg"
+                model="account.invoice"
+                report_type="qweb-pdf"
+                name="CD_template_documents.invoice_CD_Prelude_lux_template"
+                file="CD_template_documents.invoice_CD_prelude_lux_template"/>
+
+
+        <template id="invoice_CD_Prelude_lux_template">
+         <!--   <link rel='stylesheet' href="/CD_template_documents/static/src/css/style.css"/>  -->
+        <t t-call="report.html_container" >
+
+                <t t-foreach="docs" t-as="o">
+                <t t-set="o"  t-value="o.with_context({'lang':o.partner_id.lang})" />  <!--   -->
+
+                    <div class="page" >
+
+                    <div class="row">
+                        <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
+                            <address t-field="o.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                            <span t-if="o.partner_id.vat">TIN: <span t-field="o.partner_id.vat"/></span>
+                        </div>
+                    </div>
+
+
+                    <h2>
+                        <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                        <span t-if="o.type == 'out_refund'">Refund</span>
+                        <span t-if="o.type == 'in_refund'">Vendor Refund</span>
+                        <span t-if="o.type == 'in_invoice'">Vendor Bill</span>
+                        <span t-field="o.number"/>
+                    </h2>
+
+                    <div class="row mt32 mb32">
+                        <div class="col-xs-3" t-if="o.name">
+                            <strong>Description:</strong>
+                            <p t-field="o.name"/>
+                        </div>
+
+                        <div class="col-xs-3" t-if="o.date_invoice">
+                            <strong>Invoice Date:</strong>
+                            <p t-field="o.date_invoice"/>
+                        </div>
+
+                        <div class="col-xs-3" t-if="o.duedate">
+                            <strong>Date limite de paiement :</strong>
+                            <p t-field="o.duedate"/>
+                        </div>
+
+                     <!--   <div class="col-xs-2" t-if="o.date_due and o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">
+                            <strong>Due Date:</strong>
+                            <p t-field="o.date_due"/>
+                        </div>  -->
+                        <div class="col-xs-3" t-if="o.origin">
+                            <strong>Source:</strong>
+                            <p t-field="o.origin"/>
+                        </div>
+
+                        <div name="reference" class="col-xs-3" t-if="o.reference">
+                            <strong>Reference:</strong>
+                            <p t-field="o.reference"/>
+                        </div>
+
+                        <div name="reference" class="col-xs-3" t-if="o.num_affaire">
+                            <strong>Numéro d'affaire :</strong>
+                            <p t-field="o.num_affaire"/>
+                        </div>
+                    </div>
+
+                    <div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+
+                    </div>
+                    <div>
+                        <p>A défaut, la facture se reporte aux livraisons/prestations survenant les 30 derniers jours.</p>
+                    </div>
+
+
+                    <br></br>
+
+                    <!-- Is there a discount on at least one line? -->
+                    <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                            <!--    <td>Visible pour le client</td>  -->
+                                <th class="hidden">Source Document</th>
+                                <th class="text-right">Quantity</th>
+                                <th class="text-right">Unit Price</th>
+                                <th t-if="display_discount" class="text-right">Disc.(%)</th>
+                                <th class="text-right">Taxes</th>
+                                <th class="text-right">Tax Excluded Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+                            <tr t-foreach="o.invoice_line_ids" t-as="l">
+                                <t t-if="l.customer_visible==True">
+                                <td><span t-field="l.name"/></td>
+                            <!--    <td class="text-right"><span t-field="l.customer_visible"/></td>  -->
+                                <td class="hidden"><span t-field="l.origin"/></td>
+                                <td class="text-right">
+                                    <span t-field="l.quantity"/>
+                                    <span t-field="l.uom_id"  groups="product.group_uom"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_unit"/>
+                                </td>
+                                <td t-if="display_discount" class="text-right">
+                                    <span t-field="l.discount"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.invoice_line_tax_ids))"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_subtotal"
+                                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                </td>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-xs-4 pull-right">
+                            <table class="table table-condensed">
+                                <tr class="border-black">
+                                    <td><strong>Subtotal</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_untaxed" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <t t-foreach="o._get_tax_amount_by_group()" t-as="amount_by_group">
+                                    <tr>
+                                        <td><span t-esc="amount_by_group[0] if len(o.tax_line_ids) > 1 else (o.tax_line_ids.tax_id.description or o.tax_line_ids.tax_id.name)"/></td>
+                                        <td class="text-right">
+                                            <span t-esc="amount_by_group[2]"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr class="border-black">
+                                    <td><h4><strong>Total à payer</strong></h4></td>
+                                    <td class="text-right">
+                                         <h4 t-field="o.amount_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- DO NOT REMOVE THIS TABLE. MANDATORY IN SOME COUNTRIES -->
+                    <div class="row" t-if="len(o.tax_line_ids) > 0">
+                        <div class="col-xs-6">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Tax</th>
+                                        <th class="text-right">Base</th>
+                                        <th class="text-right">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="o.tax_line_ids" t-as="t">
+                                        <td><span t-field="t.tax_id.description"/></td>
+                                        <td class="text-right">
+                                            <span t-field="t.base" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="t.amount" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                        <br></br>
+                        <br></br>
+
+                        <div>
+                            <p t-field="o.message_id"></p>
+                            <t t-if="o.escompte_propose==True">
+                            <p>ESCOMPTE 1,00 % LORS D'UN PAIEMENT DANS 8 JOURS SUIVANT LA DATE DE FACTURE</p>
+                            </t>
+                        </div>
+
+                        <br></br>
+
+                        <div>
+                            <strong>Veuillez renseigner la communication suivante lors de votre paiement :</strong>
+                             <br></br>
+                            <h4 t-field="o.number"/>
+                        </div>
+
+                        <div></div>
+
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                         <br></br>
+
+
+                        <div style="border:3px; border-color:#FF0000">
+                            <p align="justify">
+                                En cas de retard de paiement du tout ou de partie du montant tel qu’exigé dans la convention avec le client, Casa Domotic SPRL se réserve le droit de suspendre ses prestations et de les reprendre dès régularisation du paiement. En cas de non-paiement à leur échéance, les factures porteront de plein droit et sans mise en demeure des intérêts au taux de 10% l’an. En outre, elles seront majorées de plein droit et sans mise en demeure de 10% à titre d’indemnité forfaitaire. L’indemnité ne sera jamais inférieure à 40,00 €. Le défaut ou le retard de paiement de tout ou partie d’une facture entraînera par ailleurs de plein droit et sans mise en demeure, l’exigibilité de toutes autres factures échues. Casa Domotic SPRL se réserve le droit de refuser toute commande ultérieure ou d’en subordonner l’acceptation à la remise de garanties suffisantes.
+
+                            </p>
+                        </div>
+
+                        <p style="page-break-before:always;"> </p>
+
+                    <p t-if="o.comment">
+                        <strong>Conditions générales de vente :</strong>
+                        <p class="small" align="justify">
+                        <span t-field="o.comment"/>
+                        </p>
+                    </p>
+               <!--      <p t-if="o.payment_term_id">
+                        <strong>Conditions générales de vente :</strong>
+                        <span t-field="o.payment_term_id.note"/>
+                    </p>
+                   <p t-if="o.fiscal_position_id.note">
+                        <strong>Fiscal Position Remark:</strong>
+                        <span t-field="o.fiscal_position_id.note"/>
+                    </p>  -->
+
+
+
+  <!--  </div>  -->
+                        </div>
+
+
+
+</t>
+        </t>
+
+</template>
+
+    <template id="report_invoice">
+        <t t-call="report.html_container" >
+            <t t-foreach="docs" t-as="o">
+                <t t-call="account.report_invoice_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="account_invoice_report_duplicate" inherit_id="account.report_invoice_document" primary="True">
+        <xpath expr="//h2" position="replace">
+            <h2>
+                <span>Duplicate</span>
+                <span t-if="o.type == 'out_refund'">refund</span>
+                <span t-if="o.type == 'out_invoice'">invoice</span>
+                <span t-field="o.number"/>
+            </h2>
+        </xpath>
+    </template>
+
+    <template id="account_invoice_report_duplicate_main">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="account.account_invoice_report_duplicate" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    </data>
+</odoo>
+

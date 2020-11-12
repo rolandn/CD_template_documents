@@ -4,7 +4,7 @@
 
 {
     'name': "Facture custom pour Casa Domotic",
-    'version': '10.0.1',
+    'version': '10.0.2',
     'category': 'Generic Modules/Accounting',
     'author':   "Roland NEYRINCK",
     'website': '',
@@ -17,7 +17,9 @@
         'views/Facture_CD.xml',
         'views/invoice_form_CD_inherited.xml',
         'views/invoice_supplier_inherit.xml',
-        'views/Facture_CD_Prelude.xml',
+        'views/Facture_CD_bel_Prelude.xml',
+        'views/Facture_CD_fr_Prelude.xml',
+        'views/Facture_CD_lux_Prelude.xml',
         'views/partner_inherit.xml',
         'views/sale_order.xml',
 
