@@ -22,7 +22,7 @@
         'views/Facture_CD_lux_Prelude.xml',
         'views/partner_inherit.xml',
         'views/sale_order.xml',
-       # 'views/account_move_line.xml',
+        'views/account_move_line.xml',
 
     ],
 
