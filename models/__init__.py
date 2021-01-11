@@ -4,4 +4,4 @@
 
 from . import CD_facture_template
 from . import escompte
-from . import account_move_line
+#from . import account_move_line
