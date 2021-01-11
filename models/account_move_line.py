@@ -1,8 +1,7 @@
 from odoo import fields, models, api
 
 
-class AccountMoveLine(models.Model):
+class AccountMoveLineInherit(models.Model):
     _inherit = 'account.move.line'
-
 
     active = fields.Boolean("Actif")
