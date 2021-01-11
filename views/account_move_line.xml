@@ -5,7 +5,7 @@
         <record id="AccountMoveLine_form_inherit" model="ir.ui.view">
             <field name="name">CD_template.AccountMoveLine.form</field>
             <field name="model">account.move.line</field>
-            <field name="account.view_move_line_form" ref="CD_template.AccountMoveLine"/>
+            <field name="inherit_id" ref="account.view_move_line_form"/>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='date']" position="after">
